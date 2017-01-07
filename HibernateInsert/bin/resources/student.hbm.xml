@@ -1,0 +1,19 @@
+
+<!DOCTYPE hibernate-mappinf PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://ww.hibernate.org/dtd/hibernate-mapping-3.0 dtd">
+<hibernate-mapping>
+
+<class name="beans.Student" table="studenttable" schema="localoms">
+
+<id name="id" column="sid"/>
+
+<property name="name" column="sname"/>
+<property name="email" column="semail"/>
+<property name="marks" column="smarks"/>
+
+</class>
+
+
+
+</hibernate-mapping>

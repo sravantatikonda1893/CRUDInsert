@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://ww.hibernate.org/dtd/hibernate-configuration-3.0 dtd">
+<hibernate-configuration>
+<!-- Db driver and connection pool properties -->
+<session-factory>
+<property name="connection.driver_class">oracle.jdbc.OracleDriver</property> 
+<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property> 
+<property name="connection.username">system</property> 
+<property name="connection.password">system</property> 
+<property name="connection.pool_size">10</property> 
+<!-- For letting hibernate to know that it has to generate sql queries for Oracle we specify that by using dialects.
+Each db type has their own dialects -->
+ <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+<!-- For mapping of a bean to a table -->
+<mapping resource="resources/student.hbm.xml"/>
+</session-factory>
+
+
+
+
+</hibernate-configuration>
